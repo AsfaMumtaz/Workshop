@@ -82,18 +82,20 @@
 </div>
 
 <script>
-    fetch("http://localhost:3000")
-      .then(response => {
-        if (!response.ok) throw new Error("Backend angry");
-        const status = document.getElementById("status");
-        status.textContent = "🎉 Yay. I can talk to the backend!";
-        status.className = "success";
+    fetch("http://simple-backend:3000/")
+      .then(response => response.json())
+      .then(data => {
+          const status = document.getElementById("status");
+          status.textContent = `🎉 Yay. Hello, ${data.username}!`;
+          status.className = "success";
       })
-      .catch(() => {
-        const status = document.getElementById("status");
-        status.textContent = "💀 Oh no. I can’t reach the backend.";
-        status.className = "error";
+      .catch(error => {
+          const status = document.getElementById("status");
+          status.textContent = "💀 Oh no. I can’t reach the backend.";
+          status.className = "error";
+          console.error(error);
       });
+
 </script>
 </body>
 </html>
