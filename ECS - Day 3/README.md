@@ -137,4 +137,4 @@ Create the ALB.
 Try opening the load balancer url.
 You won't see anything as you haven't registered any targets, let's do this through the ECS console.
 
-
+Note: While registering targets, make sure to set minimum availability to 0.
