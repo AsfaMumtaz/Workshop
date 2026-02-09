@@ -17,7 +17,7 @@ sudo docker rm <container-d>
 sudo docker rmi simple-frontend
 ```
 
-Now update the place where you see a call to localhost:3000
+Now update the code in Frontend where you see a call to simple-backend:3000/api
 
 Instead of localhost, add the instance IP.
 

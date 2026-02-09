@@ -4,7 +4,7 @@ ssh into your EC2 machine
 
 Clone the GitHub Repository 
 
-Now that you have the code downloaded and pre requisites installed. Let jump roght into it!!!
+Now that you have the code downloaded and pre requisites installed. Let jump right into it!!!
 
 Run `cat index.html` just to take a quick look at our frontend.
 Now check the Dockerfile
