@@ -4,7 +4,7 @@ import json
 HOST = "0.0.0.0"
 PORT = 3000
 
-USER_DATA = {"username": "Asfa"}
+USER_DATA = {"username": "Muskan Ejaz"}
 
 class SimpleHandler(BaseHTTPRequestHandler):
     def do_GET(self):
