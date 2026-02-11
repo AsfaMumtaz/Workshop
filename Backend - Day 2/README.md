@@ -26,3 +26,35 @@ Build and run the container again.
 
 Open the browser and see the magic!
 
+
+## Nginx
+
+```bash
+sudo dnf install nginx -y
+```
+```sudo nano /etc/nginx/nginx.conf
+```
+
+
+```bash
+server {
+    listen 80;
+
+    server_name _;
+
+    location /api {
+        proxy_pass http://localhost:3000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location / {
+        proxy_pass http://localhost:8080;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
+```
+
