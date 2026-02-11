@@ -29,11 +29,18 @@ Open the browser and see the magic!
 
 ## Nginx
 
+Install and start nginx
 ```bash
 sudo dnf install nginx -y
+sudo systemctl enable nginx
+sudo systmctl start ngnix
 ```
-```sudo nano /etc/nginx/nginx.conf
+
+Edit nginx configurations
+```bash
+sudo nano /etc/nginx/nginx.conf
 ```
+
 
 
 ```bash
